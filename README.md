@@ -1,35 +1,62 @@
-# ⚽ ScoreSight – AI Powered Football Prediction System
+# ⚽ ScoreSight
 
-## 📌 Overview
+## AI Powered Football Match & Player Prediction System
 
-ScoreSight is an AI-powered football analytics web application developed using Machine Learning and Flask. The system predicts:
-
-- Match Scores
-- Match Winners
-- Player Goals
-- Player Assists
-
-using historical English Premier League statistics.
+ScoreSight is an AI-powered football analytics web application that predicts English Premier League match results and player performance using Machine Learning.
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
-- Home Page
-- Match Prediction
-- Player Prediction
-- AI Prediction Summary
-- Modern Responsive UI
-- Random Forest Regression Model
+- ⚽ Match Score Prediction
+- 🏆 Match Winner Prediction
+- 👤 Player Performance Prediction
+- 🎯 Goals Prediction
+- 🎯 Assists Prediction
+- 🤖 AI Prediction Summary
+- 🌐 Modern Flask Web Application
+- 📊 Random Forest Machine Learning Models
 
 ---
 
-## 🛠 Technologies
+# 📷 Project Screenshots
+
+## 🏠 Home Page
+
+![Home](screenshots/home.png)
+
+---
+
+## ⚽ Match Prediction
+
+![Match Prediction](screenshots/match_prediction.png)
+
+---
+
+## 🏆 Match Result
+
+![Match Result](screenshots/match_result.png)
+
+---
+
+## 👤 Player Prediction
+
+![Player Prediction](screenshots/player_prediction.png)
+
+---
+
+## 🎯 Player Result
+
+![Player Result](screenshots/player_result.png)
+
+---
+
+# 🛠️ Technologies Used
 
 - Python
 - Flask
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 - Pandas
 - NumPy
@@ -38,19 +65,24 @@ using historical English Premier League statistics.
 
 ---
 
-## 📊 Machine Learning
+# 🤖 Machine Learning Models
 
-### Match Prediction
+## Match Prediction
 
-Algorithm:
+Model:
 
 Random Forest Regressor
 
-Inputs
+Input Features
 
 - Home Team
 - Away Team
-- Rolling Team Statistics
+- Season
+- Stage
+- Rolling Home Goals
+- Rolling Away Goals
+- Home Conceded
+- Away Conceded
 
 Outputs
 
@@ -60,22 +92,25 @@ Outputs
 
 ---
 
-### Player Prediction
+## Player Prediction
 
-Algorithm
+Model
 
 Random Forest Regressor
 
-Inputs
+Input Features
 
 - Club
 - Position
 - Age
 - Appearances
+- Wins
+- Losses
 - Shots
 - Passes
 - Tackles
 - Recoveries
+- Big Chances Created
 
 Outputs
 
@@ -84,24 +119,98 @@ Outputs
 
 ---
 
-## 📂 Project Structure
+# 📂 Folder Structure
 
-backend/
-
-frontend/
-
-models/
-
-notebooks/
-
-datasets/
+```
+ScoreSight
+│
+├── backend
+│   ├── app.py
+│   ├── predict.py
+│   ├── player_predict.py
+│   ├── requirements.txt
+│   └── models
+│
+├── frontend
+│   ├── static
+│   └── templates
+│
+├── datasets
+│
+├── notebooks
+│
+├── screenshots
+│
+├── README.md
+├── LICENSE
+└── .gitignore
+```
 
 ---
 
-## 👩‍💻 Developed By
+# ⚙️ Installation
 
-Yeldandi Sathwika
+Clone Repository
 
-B.Tech CSE (AI & ML)
+```bash
+git clone https://github.com/Yeldandi-Sathwika/ScoreSight.git
+```
+
+Move into Project
+
+```bash
+cd ScoreSight
+```
+
+Install Requirements
+
+```bash
+pip install -r backend/requirements.txt
+```
+
+Run Project
+
+```bash
+cd backend
+python app.py
+```
+
+---
+
+# 📊 Project Modules
+
+- Data Collection
+- Data Preprocessing
+- Feature Engineering
+- Match Prediction
+- Player Prediction
+- Flask Backend
+- Frontend UI
+- Result Visualization
+
+---
+
+# 🔮 Future Scope
+
+- Live EPL Data Integration
+- Win Probability Prediction
+- Player Recommendation System
+- Injury Prediction
+- Team Comparison Dashboard
+- Interactive Analytics
+
+---
+
+# 👩‍💻 Developed By
+
+**Yeldandi Sathwika**
+
+B.Tech – Computer Science & Engineering (AI & ML)
 
 Jyothishmathi Institute of Technology and Science
+
+---
+
+# ⭐ Support
+
+If you like this project, please ⭐ star the repository.
