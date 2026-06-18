@@ -1,0 +1,322 @@
+/* ==========================
+   Global
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#071330;
+    color:white;
+}
+
+/* ==========================
+   Navigation
+========================== */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    background:#10224d;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#00E5FF;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00E5FF;
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:80vh;
+    padding:80px;
+}
+
+.hero-left{
+    width:55%;
+}
+
+.hero-left h1{
+    font-size:60px;
+    line-height:80px;
+}
+
+.hero-left span{
+    color:#00E5FF;
+}
+
+.hero-left p{
+    margin-top:25px;
+    color:#d1d5db;
+    font-size:20px;
+    line-height:34px;
+}
+
+.hero-right{
+    font-size:180px;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    background:#6C63FF;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#5548ff;
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   Prediction Page
+========================== */
+
+.prediction-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.prediction-card{
+    width:650px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 0 25px rgba(0,229,255,.2);
+}
+
+.prediction-card h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.prediction-card label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.prediction-card select{
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    font-size:16px;
+}
+
+.prediction-card button{
+    width:100%;
+}
+
+/* ==========================
+   Score Box
+========================== */
+
+.score-box{
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    margin:30px 0;
+}
+
+.score-box span{
+    display:block;
+    margin:20px 0;
+    font-size:48px;
+    color:#00E5FF;
+    font-weight:bold;
+}
+
+/* ==========================
+   Winner
+========================== */
+
+.winner{
+    text-align:center;
+    color:#00E5FF;
+}
+
+/* ==========================
+   Feature Cards
+========================== */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:40px 80px;
+}
+
+.feature-card{
+    background:rgba(255,255,255,.06);
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+.feature-card h2{
+    color:#00E5FF;
+    margin-bottom:20px;
+}
+
+.feature-card p{
+    color:#d1d5db;
+    line-height:28px;
+}
+
+/* ==========================
+   Error
+========================== */
+
+.error-message{
+    background:#ff4d4d;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   Player Result
+========================== */
+
+.player-result{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin-top:25px;
+}
+
+.result-box{
+    background:rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+}
+
+.result-box h2{
+    color:#00E5FF;
+    margin-bottom:15px;
+}
+
+.result-box h1{
+    font-size:50px;
+}
+
+.player-summary{
+    margin-top:30px;
+    background:rgba(255,255,255,.05);
+    border-radius:18px;
+    padding:25px;
+}
+
+.player-summary h2{
+    color:#00E5FF;
+    margin-bottom:15px;
+}
+
+.player-summary li{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+    margin-top:50px;
+    padding:20px;
+    text-align:center;
+    background:#10224d;
+    color:#d1d5db;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:40px;
+}
+
+.hero-left{
+    width:100%;
+}
+
+.hero-left h1{
+    font-size:42px;
+    line-height:55px;
+}
+
+.hero-right{
+    margin-top:30px;
+    font-size:120px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+.prediction-card{
+    width:95%;
+}
+
+.features{
+    padding:30px;
+}
+
+.player-result{
+    grid-template-columns:1fr;
+}
+
+}

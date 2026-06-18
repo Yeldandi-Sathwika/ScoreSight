@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Player Prediction | ScoreSight</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+
+            ⚽ ScoreSight
+
+        </div>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Match Prediction</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div class="prediction-container">
+
+        <div class="prediction-card">
+
+            <h1>👤 Player Performance Prediction</h1>
+
+            <p class="text-center"
+                style="margin-bottom:25px;color:#d1d5db;">
+
+                Select a player to predict the expected Goals and Assists.
+
+            </p>
+
+            {% if error %}
+
+            <div class="error-message">
+
+                {{ error }}
+
+            </div>
+
+            {% endif %}
+
+            <form method="POST">
+
+                <label>Select Player</label>
+
+                <select name="player_name" required>
+
+                    <option value="" disabled selected>
+
+                        Choose a Player
+
+                    </option>
+
+                    {% for player in players %}
+
+                    <option value="{{ player }}">
+
+                        {{ player }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+                <button type="submit">
+
+                    🤖 Predict Performance
+
+                </button>
+
+            </form>
+
+            <div class="mt-30 text-center">
+
+                <a href="/predict">
+
+                    <button>
+
+                        ⚽ Match Prediction
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+
+            © 2026 ScoreSight | AI Powered Football Prediction
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

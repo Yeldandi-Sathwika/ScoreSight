@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result | ScoreSight</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+
+            ⚽ ScoreSight
+
+        </div>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/predict">Predict Again</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div class="prediction-container">
+
+        <div class="prediction-card">
+
+            <h1>🤖 AI Match Prediction</h1>
+
+            <p class="text-center" style="color:#d1d5db;margin-bottom:25px;">
+
+                English Premier League
+
+            </p>
+
+            <div class="score-box">
+
+                <h2>
+
+                    {{home_team}}
+
+                </h2>
+
+                <span>
+
+                    {{home_score}}
+
+                    -
+
+                    {{away_score}}
+
+                </span>
+
+                <h2>
+
+                    {{away_team}}
+
+                </h2>
+
+            </div>
+
+            <div class="feature-card mt-20">
+
+                <h2 style="text-align:center;">
+
+                    🏆 Predicted Winner
+
+                </h2>
+
+                <h1 class="winner">
+
+                    {{winner}}
+
+                </h1>
+
+            </div>
+
+            <div class="feature-card mt-20">
+
+                <h2>📊 Prediction Summary</h2>
+
+                <p>
+
+                    ✔ AI Model : Random Forest Regression
+
+                    <br><br>
+
+                    ✔ League : English Premier League
+
+                    <br><br>
+
+                    ✔ Prediction Generated Successfully
+
+                    <br><br>
+
+                    ✔ Historical Team Statistics Used
+
+                </p>
+
+            </div>
+
+            <div style="display:flex;gap:15px;margin-top:25px;">
+
+                <a href="/predict" style="flex:1;">
+
+                    <button style="width:100%;">
+
+                        🔄 Predict Again
+
+                    </button>
+
+                </a>
+
+                <a href="/" style="flex:1;">
+
+                    <button style="width:100%;background:#00bcd4;">
+
+                        🏠 Home
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+
+            © 2026 ScoreSight | AI Powered Football Match Prediction
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

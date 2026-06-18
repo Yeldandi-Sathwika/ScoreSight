@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Player Prediction Result | ScoreSight</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+
+            ⚽ ScoreSight
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="/predict">Match Prediction</a>
+            </li>
+
+            <li>
+                <a href="/player">Player Prediction</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Result -->
+
+    <div class="prediction-container">
+
+        <div class="prediction-card">
+
+            <h1>
+
+                👤 Player Performance Prediction
+
+            </h1>
+
+            <br>
+
+            <div class="score-box">
+
+                <h2>
+
+                    {{ player.player_name }}
+
+                </h2>
+
+                <br>
+
+                <h3>
+
+                    Club :
+                    <span style="color:#00E5FF">
+
+                        {{ player.club }}
+
+                    </span>
+
+                </h3>
+
+                <br>
+
+                <h3>
+
+                    Position :
+                    <span style="color:#00E5FF">
+
+                        {{ player.position }}
+
+                    </span>
+
+                </h3>
+
+                <br>
+
+                <h3>
+
+                    Age :
+                    <span style="color:#00E5FF">
+
+                        {{ player.age }}
+
+                    </span>
+
+                </h3>
+
+            </div>
+
+            <div class="feature-card mt-20">
+
+                <h2 style="text-align:center;">
+
+                    ⚽ Predicted Goals
+
+                </h2>
+
+                <h1
+                    style="text-align:center;
+                    color:#00E5FF;
+                    font-size:50px;">
+
+                    {{ player.predicted_goals }}
+
+                </h1>
+
+            </div>
+
+            <div class="feature-card mt-20">
+
+                <h2 style="text-align:center;">
+
+                    🎯 Predicted Assists
+
+                </h2>
+
+                <h1
+                    style="text-align:center;
+                    color:#00E5FF;
+                    font-size:50px;">
+
+                    {{ player.predicted_assists }}
+
+                </h1>
+
+            </div>
+
+            <div class="feature-card mt-20">
+
+                <h2>
+
+                    🤖 AI Prediction Summary
+
+                </h2>
+
+                <p>
+
+                    ✔ Model : Random Forest Regressor
+
+                    <br><br>
+
+                    ✔ Prediction based on historical player statistics.
+
+                    <br><br>
+
+                    ✔ Features Used:
+
+                    <br>
+
+                    • Club
+
+                    <br>
+
+                    • Position
+
+                    <br>
+
+                    • Age
+
+                    <br>
+
+                    • Appearances
+
+                    <br>
+
+                    • Shots
+
+                    <br>
+
+                    • Passes
+
+                    <br>
+
+                    • Tackles
+
+                    <br>
+
+                    • Recoveries
+
+                    <br>
+
+                    • Big Chances Created
+
+                </p>
+
+            </div>
+
+            <div
+                style="display:flex;
+                gap:15px;
+                margin-top:30px;">
+
+                <a href="/player" style="flex:1;">
+
+                    <button style="width:100%;">
+
+                        👤 Predict Another Player
+
+                    </button>
+
+                </a>
+
+                <a href="/" style="flex:1;">
+
+                    <button
+                        style="
+                        width:100%;
+                        background:#00BCD4;">
+
+                        🏠 Home
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+
+            © 2026 ScoreSight | AI Powered Football Analytics
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
